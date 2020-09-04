@@ -12,8 +12,6 @@ int main(void)
     }
     while(height<1||height>8);
 
-    printf("Height:%i\n",height);
-
     for (int i=0;i<height;i++)
     {
         disp(' ',height-1-i);
