@@ -22,7 +22,7 @@ int main(void)
 
 if(len==13||len==15||len==16)
 {
- check_validity(Number);
+if (check_validity(Number)==true)
  check_cardtype(Number);
 
 
@@ -46,7 +46,7 @@ bool check_validity (long v)
     int val;
     int tot=0;
     int mult;
-    for(val=0; v!=0;v/=10, val++)
+    for(val=0; v!=0;val++, v/=10)
     {
         if(val%2==0)
         {
