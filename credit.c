@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-bool check_validity(long v);
+void check_validity(long v, long w);
 
 void check_cardtype(long ct);
 
@@ -22,8 +22,8 @@ int main(void)
 
 if(len==13||len==15||len==16)
 {
-if (check_validity(Number)==true)
- check_cardtype(Number);
+ check_validity(Number,Number);
+
 
 
 } else
@@ -41,7 +41,7 @@ int length(long l)
     }
     return lt;
 }
-bool check_validity (long v)
+void check_validity (long v, long w)
 {
     int val;
     int tot=0;
@@ -59,7 +59,14 @@ bool check_validity (long v)
 
 
     }
-    return (tot%10)==0;
+    if((tot%10)==0)
+    {
+        check_cardtype(w);
+    }else
+    {
+        printf("INVALID\n");
+    }
+
 
 
 }
