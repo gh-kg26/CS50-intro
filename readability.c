@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>
-#include<ctype.h>
+#include<math.h>
 
 int letters(char *l);
 
@@ -26,7 +26,7 @@ int main(void)
     L = l * 100 / w;
     S = s * 100/w;
     float index = 0.0588 * L - 0.296 * S - 15.8;
-    int I = index;
+    int I = round(index);
     if(I < 1)
     {
         printf("Before Grade 1\n");
