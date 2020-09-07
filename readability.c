@@ -16,11 +16,11 @@ int main(void)
 {
     string Text = get_string("Text:");
     int l = letters(Text);
-    printf("%i letter(s)\n",l);
+
     int w = words(Text);
-    printf("%i word(s)\n",w);
+
     int s = sentence(Text);
-    printf("%i sentence(s)\n",s);
+
 
     float L, S;
     L = l * 100 / w;
