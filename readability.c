@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>
-#include<math.h>
 
 int letters(char *l);
 
 int words(char *w);
 
 int sentence(char *s);
+
+int roundNo(float num);
 
 
 
@@ -16,17 +17,17 @@ int main(void)
 {
     string Text = get_string("Text:");
     int l = letters(Text);
-
+printf("%i",l);
     int w = words(Text);
-
+printf("%i",w);
     int s = sentence(Text);
-
+printf("%i",s);
 
     float L, S;
     L = l * 100 / w;
     S = s * 100/w;
     float index = 0.0588 * L - 0.296 * S - 15.8;
-    int I = round(index);
+    int I = roundNo(index);
     if(I < 1)
     {
         printf("Before Grade 1\n");
@@ -96,4 +97,8 @@ int sentence(char *s)
     }
     return sen;
 
+}
+int roundNo(float num)
+{
+    return num < 0 ? num - 0.5 : num + 0.5;
 }
