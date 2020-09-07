@@ -99,5 +99,5 @@ int sentence(char *s)
 }
 int roundNo(float num)
 {
-    return num < 0 ? num - 0.5 : num + 0.4;
+    return num < 0 ? num - 0.5 : num + 0.45;
 }
