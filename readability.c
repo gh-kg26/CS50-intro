@@ -17,11 +17,10 @@ int main(void)
 {
     string Text = get_string("Text:");
     int l = letters(Text);
-printf("%i",l);
+
     int w = words(Text);
-printf("%i",w);
+
     int s = sentence(Text);
-printf("%i",s);
 
     float L, S;
     L = l * 100 / w;
@@ -100,5 +99,5 @@ int sentence(char *s)
 }
 int roundNo(float num)
 {
-    return num < 0 ? num - 0.5 : num + 0.5;
+    return num < 0 ? num - 0.5 : num + 0.4;
 }
