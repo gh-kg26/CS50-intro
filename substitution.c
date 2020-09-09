@@ -23,12 +23,14 @@ int main(int argc, string argv[])
             if (count != 26)
             {
                printf("you must enter 26 alphabet characters\n");
+               return 1;
             }
            else if ((check_alpha(argv[1]))==true)
             {
                 if((check_duplicacy(argv[1])) == true)
                 {
                    printf("you must enter 26 alphabet characters remember to enter each character only once\n");
+                   return 1;
                 }
                 else
                 {
@@ -59,6 +61,7 @@ int main(int argc, string argv[])
             else
             {
                printf("Usage: ./substitution key\n");
+               return 1;
             }
 
 
