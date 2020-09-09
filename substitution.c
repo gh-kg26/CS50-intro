@@ -44,11 +44,9 @@ int main(int argc, string argv[])
 
                    for(int i = 0; i < strlen(s); i++)
                    {
-                       if(isalpha(s[i]))
-                       {
                            s[i] = s[i] + d[s[i] - (isupper(s[i]) ? 'A' : 'a')];
                            printf("%c",s[i]);
-                       }
+
                    }
 
                    printf("\n");
