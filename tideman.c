@@ -206,7 +206,7 @@ bool check_cycl(int winner, int loser)
 
         for (int i = 0; i < candidate_count; i++)
         {
-            if (locke[i][winner])
+            if (locked[i][winner])
             {
                 flag = true;
                 winner = i;
