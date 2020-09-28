@@ -104,14 +104,14 @@ bool vote(int rank, string name, int ranks[])
     int flaged = -1;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(name,candidates[i]) == 0)
+        if (strcmp(name, candidates[i]) == 0)
         {
             flaged = i;
             break;
         }
 
     }
-    if(flaged == -1)
+    if (flaged == -1)
     {
         return false;
     }
@@ -136,7 +136,7 @@ void record_preferences(int ranks[])
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
-     for (int i = 0; i < MAX; i++)
+    for (int i = 0; i < MAX; i++)
     {
         for (int j = i + 1; j < MAX; j++)
         {
@@ -144,18 +144,18 @@ void add_pairs(void)
             int c_j = preferences[j][i];
             if (c_i != c_j)
             {
-               pair p;
-               if (c_i > c_j)
-               {
-                   p.winner = i;
-                   p.loser = j;
-               }
-               else
-               {
-                   p.winner = j;
-                   p.loser = i;
-               }
-               pairs[pair_count++] = p;
+                pair p;
+                if (c_i > c_j)
+                {
+                    p.winner = i;
+                    p.loser = j;
+                }
+                else
+                {
+                    p.winner = j;
+                    p.loser = i;
+                }
+                pairs[pair_count++] = p;
             }
         }
     }
@@ -172,7 +172,7 @@ void sort_pairs(void)
         for (int j = i + 1; j < pair_count; j++)
         {
             int temp = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
-            if(cur < temp)
+            if (cur < temp)
             {
                 index = j;
                 cur = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
@@ -206,7 +206,7 @@ bool check_cycl(int winner, int loser)
 
         for (int i = 0; i < candidate_count; i++)
         {
-            if (locked[i][winner])
+            if (locke[i][winner])
             {
                 flag = true;
                 winner = i;
